@@ -29,7 +29,6 @@ io.on('connection', (socket) => {
     })
     socket.on('disconnect', () => {
         socket.broadcast.emit("leave", { user: "Admin", message: `${users[socket.id]},has left` })
-
         console.log("user has left");
     })
 
